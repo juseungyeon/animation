@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tail</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+        .circle {
+            position: absolute;
+            animation: movex 1s ease-in-out alternate infinite;
+        }
+
+        .circle>div {
+            background: #fff;
+            width: 6vw;
+            height: 6vw;
+            border-radius: 50%;
+            animation: movey 1s linear infinite;
+        }
+
+        .circle:nth-child(2)>div {
+            width: 5vw;
+            height: 5vw;
+            opacity: 0.8;
+        }
+
+        .circle:nth-child(3)>div {
+            width: 4vw;
+            height: 4vw;
+            opacity: 0.6;
+        }
+
+        .circle:nth-child(4)>div {
+            width: 3vw;
+            height: 3vw;
+            opacity: 0.4;
+        }
+
+        .circle:nth-child(5)>div {
+            width: 2vw;
+            height: 2vw;
+            opacity: 0.2;
+        }
+
+        .circle:nth-child(2),
+        .circle:nth-child(2)>div {
+            animation-delay: 0.1s;
+        }
+
+        .circle:nth-child(3),
+        .circle:nth-child(3)>div {
+            animation-delay: 0.2s;
+        }
+
+        .circle:nth-child(4),
+        .circle:nth-child(4)>div {
+            animation-delay: 0.3s;
+        }
+
+        .circle:nth-child(5),
+        .circle:nth-child(5)>div {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes movex {
+            0% {
+                transform: translate(-12vw, 0);
+            }
+
+            100% {
+                transform: translate(12vw, 0);
+            }
+        }
+
+        @keyframes movey {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(0, -12vw);
+            }
+
+            50% {
+                transform: translate(0, 0);
+            }
+
+            75% {
+                transform: translate(0, 12vw);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div></div>
+    </div>
+    <div class="circle">
+        <div></div>
+    </div>
+    <div class="circle">
+        <div></div>
+    </div>
+    <div class="circle">
+        <div></div>
+    </div>
+    <div class="circle">
+        <div></div>
+    </div>
+</body>
+
+</html>
